@@ -7,6 +7,7 @@ body {
   nav {
     position: fixed;
     top: 10px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,6 +15,18 @@ body {
     svg {
       mix-blend-mode: difference;
       width: 200px;
+
+      path:nth-of-type(1) {
+        stroke-dasharray: 570px;
+        stroke-dashoffset: 570px;
+        animation: 4s pathAnim ease forwards;
+      }
+
+      path:nth-of-type(2) {
+        stroke-dasharray: 884px;
+        stroke-dashoffset: 884px;
+        animation: 4s pathAnim ease forwards;
+      }
     }
   }
 }
@@ -23,4 +36,10 @@ body {
   width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+@keyframes pathAnim {
+  to {
+    stroke-dashoffset: 0;
+  }
 }

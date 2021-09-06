@@ -1,0 +1,1 @@
+(()=>{"use strict";const t=document.querySelectorAll("#logo path");for(const o of t)console.log(o.getTotalLength()*(o.getBBox().width/o.getBoundingClientRect().width))})();

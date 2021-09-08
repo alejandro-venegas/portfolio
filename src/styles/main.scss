@@ -41,6 +41,7 @@ body {
   overflow-x: hidden;
   perspective: 2px;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 .content-section {

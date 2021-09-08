@@ -18,8 +18,8 @@ function getOS() {
     platform = window.navigator.platform,
     macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K"],
     windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"],
-    iosPlatforms = ["iPhone", "iPad", "iPod"],
-    os = null;
+    iosPlatforms = ["iPhone", "iPad", "iPod"];
+  let os = null;
 
   if (macosPlatforms.indexOf(platform) !== -1) {
     os = "Mac OS";

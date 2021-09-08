@@ -1,5 +1,6 @@
 import "./styles/main.scss";
 
+// Used to fix parallax on iOS browsers
 if (getOS() === "iOS") {
   const parallaxWrappers = document.querySelectorAll(".parallax .wrapper");
   parallaxWrappers.forEach((value) => {

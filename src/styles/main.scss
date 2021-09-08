@@ -4,16 +4,19 @@
   padding: 0;
   box-sizing: content-box;
 }
+html {
+  overflow: hidden;
+}
 body {
   nav {
-    position: fixed;
-    top: 10px;
+    position: sticky;
+    top: 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     mix-blend-mode: difference;
-    z-index: 100;
+    z-index: 1000;
     svg {
       mix-blend-mode: difference;
       width: 200px;
@@ -35,7 +38,7 @@ body {
 .empty-spacer {
   height: 100vh;
 }
-.scroll {
+main {
   position: relative;
   height: 100vh;
   max-height: 100vh;

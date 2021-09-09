@@ -1,10 +1,20 @@
 const nav = document.querySelector("nav");
 const spacer = document.querySelector(".empty-spacer");
 
-spacer.setAttribute(
-  "style",
-  `height: calc(100vh - ${nav.clientHeight}px - 10px)`
-);
+// Set window height programatically as
+// 100vh doesn't work well on iOS Safari
+// and iOS Google Chrome
+const appHeight = () => {
+  const doc = document.documentElement;
+  doc.style.setProperty("--screenHeight", `${window.innerHeight}px`);
+  spacer.setAttribute(
+    "style",
+    `height: calc(var(--screenHeight) - ${nav.clientHeight}px - 10px)`
+  );
+};
+window.addEventListener("resize", appHeight);
+appHeight();
+
 // Used to fix parallax on iOS browsers
 if (getOS() === "iOS") {
   const parallaxWrappers = document.querySelectorAll(".parallax .wrapper");

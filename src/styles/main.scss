@@ -1,4 +1,8 @@
 @use 'parallax';
+
+:root {
+  --screenHeight: 100vh;
+}
 * {
   margin: 0;
   padding: 0;
@@ -36,11 +40,11 @@ body {
   }
 }
 .empty-spacer {
-  height: 100vh;
+  height: var(--screenHeight);
 }
 body {
-  height: 100vh;
-  max-height: 100vh;
+  height: var(--screenHeight);
+  max-height: var(--screenHeight);
   width: 100vw;
   overflow-y: auto;
   overflow-x: hidden;
@@ -55,7 +59,7 @@ body {
 }
 
 .content-section {
-  height: 100vh;
+  height: var(--screenHeight);
   background-color: #0c0022;
   position: relative;
   z-index: 100;

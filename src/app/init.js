@@ -1,12 +1,12 @@
 const nav = document.querySelector("nav");
 const spacer = document.querySelector(".empty-spacer");
 
-spacer.setAttribute(
-  "style",
-  `height: calc(100vh - ${nav.clientHeight}px - 10px)`
-);
 // Used to fix parallax on iOS browsers
 if (getOS() === "iOS") {
+  spacer.setAttribute(
+    "style",
+    `height: calc(100vh - ${nav.clientHeight}px - 10px)`
+  );
   const parallaxWrappers = document.querySelectorAll(".parallax .wrapper");
   parallaxWrappers.forEach((value) => {
     value.setAttribute("style", "position: -webkit-sticky");

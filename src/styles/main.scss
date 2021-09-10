@@ -58,15 +58,36 @@ body {
   }
 }
 
-.content-section {
+section {
   height: var(--screenHeight);
   background-color: #0c0022;
   position: relative;
   z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+#svg-face {
+  width: 400px;
+  &.animate {
+    path {
+      animation: 5s pathAnim 0s linear forwards, 1s fillAnim 5s ease forwards;
+    }
+  }
+  path {
+    fill-opacity: 0;
+    stroke-dasharray: 648px;
+    stroke-dashoffset: 648px;
+  }
+}
 @keyframes pathAnim {
   to {
     stroke-dashoffset: 0;
+  }
+}
+@keyframes fillAnim {
+  to {
+    fill-opacity: 100%;
   }
 }

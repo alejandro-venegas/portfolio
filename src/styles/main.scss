@@ -21,22 +21,6 @@ body {
     justify-content: center;
     mix-blend-mode: difference;
     z-index: 1000;
-    svg {
-      mix-blend-mode: difference;
-      width: 200px;
-
-      path:nth-of-type(1) {
-        stroke-dasharray: 570px;
-        stroke-dashoffset: 570px;
-        animation: 4s pathAnim 0.5s ease forwards;
-      }
-
-      path:nth-of-type(2) {
-        stroke-dasharray: 883.5px;
-        stroke-dashoffset: 883.5px;
-        animation: 4s pathAnim 0.5s ease forwards;
-      }
-    }
   }
 }
 .empty-spacer {
@@ -68,19 +52,6 @@ section {
   justify-content: center;
 }
 
-#svg-face {
-  width: 400px;
-  &.animate {
-    path {
-      animation: 5s pathAnim 0s linear forwards, 1s fillAnim 5s ease forwards;
-    }
-  }
-  path {
-    fill-opacity: 0;
-    stroke-dasharray: 648px;
-    stroke-dashoffset: 648px;
-  }
-}
 @keyframes pathAnim {
   to {
     stroke-dashoffset: 0;

@@ -1,0 +1,13 @@
+face-component svg {
+  width: 400px;
+  &.animate {
+    path {
+      animation: 5s pathAnim 0s linear forwards, 1s fillAnim 5s ease forwards;
+    }
+  }
+  path {
+    fill-opacity: 0;
+    stroke-dasharray: 648px;
+    stroke-dashoffset: 648px;
+  }
+}

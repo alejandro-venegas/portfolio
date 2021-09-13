@@ -1,0 +1,4 @@
+// Media queries won't handle native CSS variables
+// so we need to use SASS variables
+$tablet-breakpoint: 768px;
+$laptop-breakpoint: 992px;

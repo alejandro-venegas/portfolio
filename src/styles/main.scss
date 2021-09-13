@@ -1,36 +1,28 @@
 @use 'parallax';
 @use 'sections';
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 :root {
   --screenHeight: 100vh;
-  --tablet-breakpoint: 768px;
-  --laptop-breakpoint: 992px;
-  --primary: #160426;
+  --primary: #0b0022;
   --secondary: #fac59f;
   --tertiary: #a32648;
   --cuaternary: #d26a4a;
+  --white: #fffff8;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: content-box;
+  font-family: "Roboto", sans-serif;
 }
 html {
   overflow: hidden;
+  font-size: 62.5%; // 1rem = 10px
 }
-body {
-  nav {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    mix-blend-mode: difference;
-    z-index: 1000;
-  }
-}
+
 .empty-spacer {
   height: var(--screenHeight);
 }
@@ -45,11 +37,30 @@ body {
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: difference;
+    z-index: 1000;
+  }
   &::-webkit-scrollbar {
     display: none;
   }
 }
-
+h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+p {
+  font-size: 2rem;
+}
+svg {
+  max-width: 100%;
+}
 @keyframes pathAnim {
   to {
     stroke-dashoffset: 0;
@@ -60,7 +71,7 @@ body {
     fill-opacity: 100%;
   }
 }
-@media only screen and (max-width: calc(var(--tablet-breakpoint) - 1px)) {
+@media only screen and (max-width: calc(#{$tablet-breakpoint} - 1px)) {
   .medium-devices--only {
     display: none !important;
   }
@@ -72,7 +83,7 @@ body {
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: var(--tablet-breakpoint)) and (max-width: var(--laptop-breakpoint)) {
+@media only screen and (min-width: $tablet-breakpoint) and (max-width: $laptop-breakpoint) {
   .small-devices--only {
     display: none !important;
   }
@@ -82,7 +93,7 @@ body {
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: var(--laptop-breakpoint)) {
+@media only screen and (min-width: $laptop-breakpoint) {
   .small-devices--only {
     display: none !important;
   }

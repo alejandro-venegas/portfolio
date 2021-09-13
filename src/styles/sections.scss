@@ -1,14 +1,33 @@
+@import "variables";
 section {
-  height: var(--screenHeight);
+  min-height: var(--screenHeight);
   position: relative;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
+  flex-direction: column;
+  .info-container {
+    margin: 0 3rem;
+    max-width: 50rem;
+    p {
+      margin: 2rem 0;
+    }
+    display: flex;
+    flex-direction: column;
+  }
 }
 section:nth-of-type(1) {
-  background-color: #0c0022;
+  background-color: var(--primary);
+  color: var(--white);
 }
 section:nth-of-type(2) {
   background-color: #251230;
+}
+
+@media only screen and (min-width: $tablet-breakpoint) {
+  section {
+    flex-direction: row;
+  }
 }

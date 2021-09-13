@@ -1,8 +1,8 @@
 face-component svg {
-  width: 400px;
+  width: 500px;
   &.animate {
     path {
-      animation: 5s pathAnim 0s linear forwards, 1s fillAnim 5s ease forwards;
+      animation: 3s pathAnim 0s linear forwards, 1s fillAnim 3s ease forwards;
     }
   }
   path {

@@ -18,7 +18,7 @@ class Logo extends HTMLElement {
       >
         <style type="text/css">
           logo-component .st0 {
-            fill: none;
+            fill: white;
             stroke: white;
             stroke-width: 1.5;
             stroke-miterlimit: 10;

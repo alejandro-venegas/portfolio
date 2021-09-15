@@ -7,6 +7,7 @@ class Face extends HTMLElement {
     this.innerHTML = `
         <?xml version="1.0" encoding="utf-8"?>
         <svg
+          animate
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -66,16 +67,3 @@ class Face extends HTMLElement {
   }
 }
 customElements.define("face-component", Face);
-let options = {
-  root: document.querySelector("body"),
-  rootMargin: "0px",
-  threshold: 1,
-};
-const faceSVG = document.querySelector("face-component svg");
-let observer = new IntersectionObserver((entries, observer) => {
-  if (entries[0].isIntersecting) {
-    faceSVG.classList.add("animate");
-  }
-}, options);
-
-observer.observe(faceSVG);

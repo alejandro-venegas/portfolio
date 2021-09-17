@@ -34,9 +34,16 @@ section:nth-of-type(1) {
   color: var(--white);
 }
 section:nth-of-type(2) {
-  background-color: #160b28;
+  background-color: #1c112c;
+  color: var(--white);
 }
-
+section:nth-of-type(3) {
+  background-color: #2e1a37;
+  color: var(--white);
+}
+.service-card {
+  width: 100px;
+}
 @media only screen and (min-width: $tablet-breakpoint) {
   section {
     flex-direction: row;

@@ -79,5 +79,6 @@ main > section {
 @media only screen and (min-width: $tablet-breakpoint) {
   main > section {
     flex-direction: row;
+    padding: 6rem 4rem;
   }
 }

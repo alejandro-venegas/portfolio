@@ -1,0 +1,27 @@
+[animate="fadeLeft"] {
+  transform: translateX(-100px) translateZ(0);
+  opacity: 0;
+  transition: transform linear 600ms, opacity linear 600ms;
+  &.animate {
+    transform: translateX(0) translateZ(0);
+    opacity: 1;
+  }
+}
+[animate="fadeRight"] {
+  transform: translateX(100px) translateZ(0);
+  opacity: 0;
+  transition: transform linear 600ms, opacity linear 600ms;
+  &.animate {
+    transform: translateX(0) translateZ(0);
+    opacity: 1;
+  }
+}
+[animate="fadeBottom"] {
+  transform: translateY(50px) translateZ(0);
+  opacity: 0;
+  transition: transform linear 600ms, opacity linear 600ms;
+  &.animate {
+    transform: translateY(0) translateZ(0);
+    opacity: 1;
+  }
+}

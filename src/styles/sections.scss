@@ -47,6 +47,15 @@ main > section {
   }
 }
 #services-section {
+  [animate]:not(svg) {
+    transition: transform linear 600ms, opacity linear 600ms;
+    transform: translateX(-100px) translateZ(0);
+    opacity: 0;
+  }
+  .animate:not(svg) {
+    opacity: 1;
+    transform: translateX(0) translateZ(0);
+  }
   .info-container {
     width: 90%;
     max-width: 120rem;

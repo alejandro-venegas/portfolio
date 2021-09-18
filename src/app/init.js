@@ -1,5 +1,5 @@
 // Sets all initial configuration
-const nav = document.querySelector("nav");
+const nav = document.querySelector("header");
 const spacer = document.querySelector(".empty-spacer");
 const os = getOS();
 if (os === "iOS") {

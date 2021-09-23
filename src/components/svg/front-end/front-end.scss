@@ -2,8 +2,8 @@ front-end-component {
   svg {
     &.animate {
       path {
-        animation: 2s pathAnim 0.5s ease forwards,
-          1s fillAnim 2.5s ease forwards;
+        animation: 1.6s pathAnim 0.5s ease forwards,
+          1s fillAnim 2.1s ease forwards;
       }
     }
     path {

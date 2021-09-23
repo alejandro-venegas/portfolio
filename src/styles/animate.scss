@@ -17,7 +17,7 @@
   }
 }
 [animate="fadeBottom"] {
-  transform: translateY(50px) translateZ(0);
+  transform: translateY(50%) translateZ(0);
   opacity: 0;
   transition: transform linear 600ms, opacity linear 600ms;
   &.animate {

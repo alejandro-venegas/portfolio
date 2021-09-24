@@ -80,12 +80,35 @@ main > section {
   }
 }
 #experiences-section {
+  h2 {
+    font-size: 3rem;
+  }
+
   .info-container {
     width: 90%;
     max-width: 90rem;
     .experience-section {
       margin-top: 4rem;
       margin-left: 4rem;
+
+      li {
+        em {
+          color: #db8970;
+        }
+        a {
+          color: #db8970;
+        }
+        &.experience-item {
+          margin: 2rem 0;
+          h3 {
+            margin: 0;
+          }
+          .date {
+            font-size: 1.6rem;
+            margin: 0;
+          }
+        }
+      }
     }
   }
 }

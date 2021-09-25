@@ -8,7 +8,6 @@ let observer = new IntersectionObserver((entries, observer) => {
   for (const entry of entries) {
     if (entry.isIntersecting) {
       entry.target.classList.add("animate");
-    } else {
     }
   }
 }, options);

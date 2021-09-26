@@ -1,6 +1,4 @@
 // Sets all initial configuration
-const nav = document.querySelector("header");
-const spacer = document.querySelector(".empty-spacer");
 const os = getOS();
 if (os === "iOS") {
   // Fix parallax on iOS devices
@@ -17,11 +15,6 @@ const appHeight = () => {
     const doc = document.documentElement;
     doc.style.setProperty("--screenHeight", `${window.innerHeight}px`);
   }
-
-  spacer.setAttribute(
-    "style",
-    `height: calc(var(--screenHeight) - ${nav.clientHeight}px - 10px)`
-  );
 };
 window.addEventListener("resize", appHeight);
 appHeight();

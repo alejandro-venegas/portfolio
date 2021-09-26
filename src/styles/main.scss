@@ -28,7 +28,7 @@ html {
 }
 
 .empty-spacer {
-  height: var(--screenHeight);
+  height: calc(var(--screenHeight) - 112.933px);
 }
 body {
   height: var(--screenHeight);

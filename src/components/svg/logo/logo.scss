@@ -1,6 +1,8 @@
 logo-component svg {
   mix-blend-mode: difference;
-  width: 100px;
+  width: 30rem;
+  max-width: 100%;
+  transition: width linear 300ms;
 
   path:nth-of-type(1) {
     stroke-dasharray: 570px;

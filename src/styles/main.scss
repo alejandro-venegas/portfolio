@@ -28,7 +28,9 @@ html {
 }
 
 .empty-spacer {
-  height: calc(var(--screenHeight) - 112.933px);
+  max-height: calc(var(--screenHeight) - 328.317px);
+  transition: max-height linear 300ms;
+  height: 3000rem;
 }
 body {
   height: var(--screenHeight);

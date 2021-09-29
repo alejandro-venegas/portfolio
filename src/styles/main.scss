@@ -89,6 +89,9 @@ em {
   font-weight: 900;
   font-style: normal;
 }
+section {
+  backface-visibility: hidden;
+}
 @keyframes pathAnim {
   to {
     stroke-dashoffset: 0;

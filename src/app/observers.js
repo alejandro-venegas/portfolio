@@ -1,5 +1,6 @@
 const presentationElem = document.getElementById("presentation-section");
 const logoSVG = document.querySelector("logo-component svg");
+const header = document.querySelector("body header");
 const emptySpacer = document.querySelector(".empty-spacer");
 const logoObserverOptions = {
   root: document.querySelector("body"),
@@ -10,6 +11,7 @@ const logoObserver = new IntersectionObserver((entries) => {
   if (entries[0].isIntersecting) {
     logoSVG.style.width = "100px";
     emptySpacer.style.maxHeight = "calc(var(--screenHeight) - 112.933px)";
+    header.setAttribute("style", "height: auto;");
   }
 }, logoObserverOptions);
 logoObserver.observe(presentationElem);

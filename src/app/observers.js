@@ -12,7 +12,8 @@ const logoObserverOptions = {
 const logoObserver = new IntersectionObserver((entries) => {
   if (entries[0].isIntersecting) {
     logoSVG.style.width = "100px";
-    emptySpacer.style.maxHeight = "calc(var(--screenHeight) - 112.933px)";
+    emptySpacer.style.maxHeight =
+      "calc(var(--screenHeight) - 112.933px - 150px)";
     header.setAttribute("style", "height: auto;");
   }
 }, logoObserverOptions);

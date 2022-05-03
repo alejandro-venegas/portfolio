@@ -1,12 +1,12 @@
-@use 'parallax';
-@use 'sections';
-@use 'animate';
+@use "parallax";
+@use "sections";
+@use "animate";
 @import "variables";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800;900&display=swap");
 
 :root {
   --screenHeight: 100vh;
-  --primary: #0C001F;
+  --primary: #0c001f;
   --secondary: #fac59f;
   --accent: #a32648;
   --cuaternary: #d26a4a;
@@ -28,7 +28,7 @@ html {
 }
 
 .empty-spacer {
-  max-height: calc(var(--screenHeight) - 328.317px);
+  max-height: calc(var(--screenHeight) - 328.317px - 150px);
   transition: max-height linear 300ms;
   height: 3000rem;
 }
@@ -92,6 +92,28 @@ em {
 }
 section {
   backface-visibility: hidden;
+}
+
+.left-links {
+  position: sticky;
+  width: max-content;
+  z-index: 200;
+  left: 10px;
+  height: 150px;
+  top: 50%;
+  transform: translateY(-50%);
+  mix-blend-mode: difference;
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    li {
+      img {
+        filter: invert(100%);
+      }
+    }
+  }
 }
 @keyframes pathAnim {
   to {

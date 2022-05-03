@@ -28,6 +28,10 @@ main > section {
     background-color: #40253f;
     color: var(--white);
   }
+  &:nth-of-type(5) {
+    background-color: #523049;
+    color: var(--white);
+  }
   .info-container {
     max-width: 100%;
     display: flex;
@@ -196,6 +200,25 @@ main > section {
               brightness(104%) contrast(96%);
           }
         }
+      }
+    }
+  }
+}
+
+#contact-section {
+  .info-container {
+    max-width: 90rem;
+    text-align: center;
+    align-items: center;
+  }
+  .social-links {
+    height: max-content;
+    position: static;
+    transform: unset;
+    ul {
+      flex-direction: row;
+      li {
+        margin: 0 1rem;
       }
     }
   }

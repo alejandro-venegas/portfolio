@@ -84,7 +84,7 @@ svg {
   max-width: 100%;
 }
 a {
-  color: var(--accent);
+  color: var(--secondary);
 }
 em {
   font-weight: 900;
@@ -94,7 +94,7 @@ section {
   backface-visibility: hidden;
 }
 
-.left-links {
+.social-links {
   position: sticky;
   width: max-content;
   z-index: 200;

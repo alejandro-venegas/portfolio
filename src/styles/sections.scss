@@ -1,6 +1,7 @@
 @import "variables";
 main > section {
   min-height: var(--screenHeight);
+
   position: relative;
   z-index: 100;
   display: flex;
@@ -28,6 +29,7 @@ main > section {
     color: var(--white);
   }
   .info-container {
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     p {
@@ -171,6 +173,7 @@ main > section {
         display: flex;
         flex-flow: wrap;
         margin-top: 2rem;
+        max-width: 100%;
         width: max-content;
         li {
           color: var(--secondary);

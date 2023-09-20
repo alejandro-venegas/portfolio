@@ -20,7 +20,7 @@
 .layer--1 {
   z-index: 50;
   bottom: 0;
-  position: relative;
+  position: absolute;
 
   &::after{
     background-color: var(--primary);
@@ -30,7 +30,7 @@
     content: '';
     left: 0;
     bottom: 0;
-    transform: translateY(100%);
+    transform: translateY(50%);
   }
 }
 .layer--2 {

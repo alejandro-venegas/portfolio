@@ -6,7 +6,6 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  transform-style: preserve-3d;
 }
 
 .layer__hero {
@@ -26,11 +25,11 @@
     background-color: var(--primary);
     width: 100%;
     position: absolute;
-    height: 10px;
+    height: 100px;
     content: '';
     left: 0;
     bottom: 0;
-    transform: translateY(50%);
+    transform: translateY(100%);
   }
 }
 .layer--2 {

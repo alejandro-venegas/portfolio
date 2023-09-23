@@ -1,10 +1,13 @@
 // Sets all initial configuration
 const os = getOS();
 const parallaxContainerElem = document.querySelector(".parallax");
-document.addEventListener("scroll", (_) => {
-  console.log(document.documentElement.scrollTop);
-  parallaxContainerElem.scrollTo(0, document.documentElement.scrollTop);
-});
+
+const parallaxScrolling = () => {
+  parallaxContainerElem.scrollTo({ top: document.documentElement.scrollTop });
+  requestAnimationFrame(parallaxScrolling);
+};
+
+parallaxScrolling();
 
 const appHeight = () => {
   // Set window height programatically as

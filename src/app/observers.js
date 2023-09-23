@@ -1,10 +1,9 @@
 const presentationElem = document.getElementById("presentation-section");
 const logoSVG = document.querySelector("logo-component svg");
 const header = document.querySelector("body header");
-const emptySpacer = document.querySelector(".empty-spacer");
 
 const logoObserverOptions = {
-  root: document.querySelector("body"),
+  root: null,
   rootMargin: "0px",
   threshold: 0.25,
 };
@@ -12,15 +11,13 @@ const logoObserverOptions = {
 const logoObserver = new IntersectionObserver((entries) => {
   if (entries[0].isIntersecting) {
     logoSVG.style.width = "100px";
-    emptySpacer.style.maxHeight =
-      "calc(var(--screenHeight) - 112.933px - 150px)";
     header.setAttribute("style", "height: auto;");
   }
 }, logoObserverOptions);
 logoObserver.observe(presentationElem);
 
 const options50 = {
-  root: document.querySelector("body"),
+  root: null,
   rootMargin: "0px",
   threshold: 0.5,
 };

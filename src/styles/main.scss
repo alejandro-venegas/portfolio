@@ -24,12 +24,11 @@
 }
 html {
   font-size: 62.5%; // 1rem = 10px
-}
-
-.empty-spacer {
-  max-height: calc(var(--screenHeight) - 328.317px - 150px);
-  transition: max-height linear 300ms;
-  height: 3000rem;
+  overflow-x: hidden;
+  scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 }
 .parallax {
   position: fixed;
@@ -53,7 +52,7 @@ html {
 
 header {
   height: 328.217px;
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   display: flex;
@@ -63,6 +62,9 @@ header {
   z-index: 1000;
 }
 
+.empty-spacer{
+  height: 100vh;
+}
 
 ul {
   list-style: none;
@@ -103,7 +105,7 @@ section {
 }
 
 .social-links {
-  position: sticky;
+  position: fixed;
   width: max-content;
   z-index: 200;
   left: 10px;

@@ -23,7 +23,6 @@
   letter-spacing: 1px;
 }
 html {
-  overflow: hidden;
   font-size: 62.5%; // 1rem = 10px
 }
 
@@ -32,30 +31,39 @@ html {
   transition: max-height linear 300ms;
   height: 3000rem;
 }
-body {
+.parallax {
+  position: fixed;
+  top: 0;
+  left: 0;
   height: var(--screenHeight);
   max-height: var(--screenHeight);
   width: 100vw;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   perspective: 2px;
-
   scrollbar-width: none;
-  header {
-    height: 328.217px;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    mix-blend-mode: difference;
-    z-index: 1000;
-  }
   &::-webkit-scrollbar {
-    display: none;
+      display: none;
+    }
+
+  &__padding{
+    width: 100vw;
+    height: 200vh;
   }
 }
+
+header {
+  height: 328.217px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: difference;
+  z-index: 1000;
+}
+
+
 ul {
   list-style: none;
 }

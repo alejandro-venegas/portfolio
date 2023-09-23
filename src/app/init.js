@@ -1,12 +1,11 @@
 // Sets all initial configuration
 const os = getOS();
-if (os === "iOS") {
-  // Fix parallax on iOS devices
-  const parallaxWrappers = document.querySelectorAll(".parallax .wrapper");
-  parallaxWrappers.forEach((value) => {
-    value.setAttribute("style", "position: -webkit-sticky");
-  });
-}
+const parallaxContainerElem = document.querySelector(".parallax");
+document.addEventListener("scroll", (_) => {
+  console.log(document.documentElement.scrollTop);
+  parallaxContainerElem.scrollTo(0, document.documentElement.scrollTop);
+});
+
 const appHeight = () => {
   // Set window height programatically as
   // 100vh doesn't work well on iOS Safari
